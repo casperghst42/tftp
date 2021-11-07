@@ -7,7 +7,7 @@ docker build --rm -t casperghst42/tftp .
 
 To Run:
 ```
-docker run -p 69:69/udp -i -t pghalliday/tftp
+docker run -v tftp-data:/var/tftpboot -p 69:69/udp -i -t pghalliday/tftp
 ```
 
 Docker-compose
