@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+    tftp:
+        hostname: tftp
+        container_name: tftp
+        build: .
+        volumes:
+            - tftp-data:/var/tftpboot
+            - /etc/localtime:/etc/localtime:ro
+        environment:
+            - TZ=Europe/Berlin
+        ports:
+            - "69:69/udp"
+
+volumes:
+  tftp-data:
